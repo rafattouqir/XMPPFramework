@@ -15,7 +15,7 @@
 @interface XMPPMessageArchiveManagement : XMPPModule {
 	XMPPIDTracker *xmppIDTracker;
 }
-
+@property (readonly, nonatomic) NSString *queryID;
 /**
  When this is set to 0 (the default), the module will finish retrieving messages after receiving the first page IQ result.
  Setting it to a non-zero value will cause the module to automatically repeat the query for further pages of specified size until a "fin" result with "complete=true" attribute is received.
